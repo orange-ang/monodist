@@ -1,0 +1,34 @@
+# ==============================
+# Lite-Mono-MonDI Requirements
+# (不含DAR，仅DA3 + UniDepth)
+# ==============================
+
+# ---- Core (Lite-Mono Student) ----
+torch>=2.0.0
+torchvision>=0.15.0
+numpy>=1.24.0
+Pillow>=9.0.0
+tensorboardX>=2.6
+scikit-image>=0.20.0
+timm>=0.9.0
+opencv-python>=4.7.0
+linear-warmup-cosine-annealing-warm-restarts-weight-decay
+scipy>=1.10.0
+tqdm>=4.65.0
+six>=1.16.0
+typing-extensions>=4.6.0
+
+# ---- Depth-Anything-3 Teacher ----
+omegaconf>=2.3.0
+addict>=2.4.0
+safetensors>=0.4.0
+einops>=0.6.0
+imageio>=2.31.0
+# numpy 需 <2（DA3 官方约束）；如与上方 Core 冲突以 <2 为准
+numpy<2
+# DA3 官方 requirements 另含 xformers / e3nn，按服务器环境安装
+
+# ---- UniDepth Teacher ----
+huggingface-hub>=0.22.0
+xformers>=0.0.26
+triton>=2.0.0
